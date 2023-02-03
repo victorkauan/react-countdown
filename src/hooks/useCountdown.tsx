@@ -1,6 +1,13 @@
 import { useState } from 'react';
 
-function useCountdown(date: string) {
+interface UseCountdownReturn {
+  day: number;
+  hour: number;
+  minute: number;
+  second: number;
+}
+
+function useCountdown(date: string): UseCountdownReturn {
   const [day, setDay] = useState(0);
   const [hour, setHour] = useState(0);
   const [minute, setMinute] = useState(0);
@@ -30,7 +37,7 @@ function useCountdown(date: string) {
 
   setInterval(countDown, 1000);
 
-  return [day, hour, minute, second];
+  return { day, hour, minute, second };
 }
 
 export default useCountdown;
