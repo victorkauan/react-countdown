@@ -2,6 +2,7 @@ import { Title } from './components/Title';
 import { Counter } from './components/Counter';
 
 import newYearBackgroundImage from './assets/new-year-background.jpg';
+import './App.css';
 
 export function App() {
   return (
