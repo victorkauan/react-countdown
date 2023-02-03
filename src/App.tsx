@@ -1,12 +1,21 @@
 import { Title } from './components/Title';
+import { Counter } from './components/Counter';
+
+import newYearBackgroundImage from './assets/new-year-background.jpg';
 
 export function App() {
   return (
-    <div className='App'>
+    <div
+      className='App'
+      style={{ backgroundImage: `url(${newYearBackgroundImage})` }}
+    >
       <div className='container'>
         <Title title='Countdown to 2024' />
         <div className='counter-container'>
-          <p>2 days</p>
+          <Counter title='Days' number={0} />
+          <Counter title='Hours' number={0} />
+          <Counter title='Minutes' number={0} />
+          <Counter title='Seconds' number={0} />
         </div>
       </div>
     </div>
